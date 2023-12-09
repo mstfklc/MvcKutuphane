@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<link href="~/web2/css/style.css" rel="stylesheet" />
+<link href="~/web2/css/jqvmap.css" rel="stylesheet" />
+<script src="~/web2/js/Chart1.js"></script>
+<script src="~/web2/js/jquery.min.js"></script>
+<script src="~/web2/js/jquery.vmap.js"></script>
+<script src="~/web2/js/jquery.vmap.sampledata.js"></script>
+<script src="~/web2/js/jquery.vmap.world.js"></script>
+
+<script type="text/javascript">
+    jQuery(document).ready(function () {
+        jQuery('#vmap').vectorMap({
+            map: 'world_en',
+            backgroundColor: '#333333',
+            color: '#ffffff',
+            hoverOpacity: 0.7,
+            selectedColor: '#666666',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#C8EEFF', '#006491'],
+            normalizeFunction: 'polynomial'
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function (c) {
+        $('.alert-close6').on('click', function (c) {
+            $('.world-map').fadeOut('slow', function (c) {
+                $('.world-map').remove();
+            });
+        });
+    });
+</script>
+<div class="list_of_members">
+    <div class="sales">
+        <div class="icon">
+            <i class="dollar"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.Dgr4</h3>
+            <p>Kasadaki Tutar</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="new-users">
+        <div class="icon">
+            <i class="user1"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.Dgr1</h3>
+            <p>Toplam Üye</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="orders">
+        <div class="icon">
+            <i class="order"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.Dgr2</h3>
+            <p>Kitap Sayımız</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="visitors">
+        <div class="icon">
+            <i class="visit"></i>
+        </div>
+        <div class="icon-text">
+            <h3>@ViewBag.Dgr3</h3>
+            <p>Emanet Kitaplar</p>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div class="total-sales">
+    <div class="to-do">
+        <div class="alert-close5"> </div>
+        <h3>Yapılacak Listesi</h3>
+        <div class="checkbox-form">
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Yayınevini ara.</label>
+            </div>
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Emanet kitaplar için kontrol.</label>
+            </div>
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Kasayı kontrol et.</label>
+            </div>
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Haftasonu çalışması</label>
+            </div>
+            <div class="check">
+                <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Yeni kitapların girişi.</label>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+
+<div class="total-world">
+    <div class="clearfix"></div>
+</div>
